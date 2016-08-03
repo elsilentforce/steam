@@ -79,6 +79,10 @@ module Locomotive::Steam
       def name
         self[:name]
       end
+      
+      def to_liquid
+        Locomotive::Steam::Liquid::Drops::I18nBase.new(self)
+      end
 
     end
 
